@@ -2,14 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final dataProvider = FutureProvider<String>(
-  (ref) async {
-    return "Hello World!";
-  },
-);
-
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -63,7 +57,7 @@ class MainPage extends HookConsumerWidget {
           FirstWidget(
             submit: (value) {
               submittedValue.value = value;
-              tabController.index = 1;
+              //tabController.index = 1;
             },
           ),
           PreviewWidget(
